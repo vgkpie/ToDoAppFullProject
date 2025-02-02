@@ -1,0 +1,26 @@
+@model List<ToDoApp.Models.Task>
+
+<h2>Your Tasks</h2>
+
+@if (Model != null && Model.Any())
+{
+    <ul class="list-group">
+        @foreach (var task in Model)
+        {
+            <li id="task-@task.Id" class="list-group-item">
+                <span class="task-title">@task.Title</span> - 
+                <span class="task-status">@task.Status</span>
+                <div class="float-right">
+                    <a asp-controller="Home" asp-action="Edit" asp-route-id="@task.Id" class="btn btn-secondary">Edit</a> |
+                    <a asp-controller="Home" asp-action="Delete" asp-route-id="@task.Id" class="btn btn-danger">Delete</a>
+                </div>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p class="text-muted">You have no tasks at the moment.</p>
+}
+
+<a asp-controller="ToDo" asp-action="Create" class="btn btn-primary">Create a New Task</a>

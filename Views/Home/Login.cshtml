@@ -1,0 +1,25 @@
+<h2>Login</h2>
+
+<form asp-action="Login" method="post">
+    <div>
+        <label for="username">Username</label>
+        <input type="text" name="username" required />
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" required />
+    </div>
+    <button type="submit">Login to Your Account</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="text-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
+
+<a asp-action="Register">Don't have an account? Register here</a>
