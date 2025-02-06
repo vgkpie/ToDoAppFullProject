@@ -1,26 +1,38 @@
-@model List<ToDoApp.Models.Task>
+@model IEnumerable<ToDoApp.Models.Task>
 
-<h2>Your Tasks</h2>
+@{
+    ViewData["Title"] = "Dashboard";
+}
 
-@if (Model != null && Model.Any())
-{
-    <ul class="list-group">
+<h2>Dashboard</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Completed</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
         @foreach (var task in Model)
         {
-            <li id="task-@task.Id" class="list-group-item">
-                <span class="task-title">@task.Title</span> - 
-                <span class="task-status">@task.Status</span>
-                <div class="float-right">
-                    <a asp-controller="Home" asp-action="Edit" asp-route-id="@task.Id" class="btn btn-secondary">Edit</a> |
-                    <a asp-controller="Home" asp-action="Delete" asp-route-id="@task.Id" class="btn btn-danger">Delete</a>
-                </div>
-            </li>
-        }
-    </ul>
-}
-else
-{
-    <p class="text-muted">You have no tasks at the moment.</p>
-}
+            <tr>
+                <td>@task.Title</td>
+                <td>@task.Description</td>
+                <td>@(task.IsCompleted ? "✔️" : "❌")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@task.Id">Edit</a>
 
-<a asp-controller="ToDo" asp-action="Create" class="btn btn-primary">Create a New Task</a>
+                    <form asp-action="Delete" method="post" style="display:inline;">
+                        <input type="hidden" name="id" value="@task.Id" />
+                        <button type="submit" onclick="return confirm('Are you sure?');">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-primary">Create New Task</a>
