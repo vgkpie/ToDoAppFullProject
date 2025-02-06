@@ -41,7 +41,6 @@
 /Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/scopedcss/bundle/ToDoApp.styles.css
 /Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/scopedcss/projectbundle/ToDoApp.bundle.scp.css
-/Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/compressed/4bmfksnjcg-b9sayid5wm.gz
 /Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/compressed/13ztrnwvwp-61n19gt1b8.gz
 /Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/compressed/6gbfcxjcpd-xtxxf3hu2r.gz
 /Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/compressed/nnkc388byv-bqjiyaj88i.gz
@@ -103,8 +102,6 @@
 /Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/compressed/ch3vbuyw1q-muycvpuwrr.gz
 /Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/compressed/5gc0ls2zb9-87fc7y1x7t.gz
 /Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/compressed/v761afhfwq-mlv21k5csn.gz
-/Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/compressed/su4j484oos-e2fqaq0dfz.gz
-/Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/compressed/tweftdi20q-e2fqaq0dfz.gz
 /Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/staticwebassets.build.json
 /Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/staticwebassets.development.json
 /Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/staticwebassets.build.endpoints.json
@@ -189,3 +186,6 @@
 /Users/boqnaleksandrow/ToDoApp/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/boqnaleksandrow/ToDoApp/bin/Debug/net9.0/BCrypt.Net-Next.dll
 /Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/ToDoApp.sourcelink.json
+/Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/compressed/4bmfksnjcg-r6y2vk5mgc.gz
+/Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/compressed/su4j484oos-cm4vvbi3iw.gz
+/Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/compressed/tweftdi20q-cm4vvbi3iw.gz

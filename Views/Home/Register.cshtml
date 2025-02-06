@@ -1,24 +1,28 @@
 @model ToDoApp.Models.User
 
-<h2>Register</h2>
-
-<form asp-action="Register" method="post">
-    <div>
-        <label asp-for="Username"></label>
-        <input asp-for="Username" />
-        <span asp-validation-for="Username"></span>
+<div class="container d-flex justify-content-center align-items-start vh-100">
+    <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%; border-radius: 15px;">
+        <h2 class="text-center text-primary">Register</h2>
+        <form asp-action="Register" method="post" class="register-form">
+            <div class="mb-3">
+                <label asp-for="Username" class="form-label text-primary"></label>
+                <input asp-for="Username" class="form-control" required />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="PasswordHash" class="form-label text-primary">Password</label>
+                <input asp-for="PasswordHash" type="password" class="form-control" required />
+                <span asp-validation-for="PasswordHash" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label text-primary"></label>
+                <input asp-for="Email" type="email" class="form-control" required />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <button name="register" type="submit" class="btn btn-primary w-100">Register Account</button>
+        </form>
+        <div class="text-center mt-3">
+            <a asp-action="Login" class="text-primary">Already have an account? Login here</a>
+        </div>
     </div>
-    <div>
-        <label asp-for="PasswordHash"></label>
-        <input asp-for="PasswordHash" type="password" />
-        <span asp-validation-for="PasswordHash"></span>
-    </div>
-    <div>
-        <label asp-for="Email"></label>
-        <input asp-for="Email" />
-        <span asp-validation-for="Email"></span>
-    </div>
-    <button type="submit">Register Account</button>
-</form>
-
-<a asp-action="Login">Already have an account? Login here</a>
+</div>

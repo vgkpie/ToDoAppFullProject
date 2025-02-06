@@ -2,7 +2,7 @@
 
 <h1>Create New Task</h1>
 
-<form asp-action="Create" method="post">
+<form asp-controller="ToDo" asp-action="Create" method="post">
     <div class="form-group">
         <label asp-for="Title"></label>
         <input asp-for="Title" class="form-control" />

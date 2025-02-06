@@ -1,25 +1,34 @@
-<h2>Login</h2>
+@model ToDoApp.Models.User
 
-<form asp-action="Login" method="post">
-    <div>
-        <label for="username">Username</label>
-        <input type="text" name="username" required />
-    </div>
-    <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" required />
-    </div>
-    <button type="submit">Login to Your Account</button>
-</form>
+<div class="container d-flex justify-content-center align-items-start vh-100">
+    <div class="card shadow-lg p-4" style="max-width: 400px; width: 100%; border-radius: 15px;">
+        <h2 class="text-center text-primary">Login</h2>
+        <form asp-action="Login" method="post" class="register-form">
+            <div class="mb-3">
+                <label for="username" class="form-label text-primary">Username</label>
+                <input type="text" name="username" class="form-control" required />
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label text-primary">Password</label>
+                <input type="password" name="password" class="form-control" required />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
 
-@if (!ViewData.ModelState.IsValid)
-{
-    <div class="text-danger">
-        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        <!-- Display Validation Errors -->
+        @if (!ViewData.ModelState.IsValid)
         {
-            <p>@error.ErrorMessage</p>
+            <div class="text-danger mt-3">
+                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    <p>@error.ErrorMessage</p>
+                }
+            </div>
         }
-    </div>
-}
 
-<a asp-action="Register">Don't have an account? Register here</a>
+        <!-- Link to Register Page -->
+        <div class="text-center mt-3">
+            <a asp-action="Register" class="text-primary">Don't have an account? Register here</a>
+        </div>
+    </div>
+</div>

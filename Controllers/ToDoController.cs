@@ -35,7 +35,7 @@ namespace ToDoApp.Controllers
                 _context.Tasks.Add(task);
                 _context.SaveChanges();
                 TempData["SuccessMessage"] = "Task created successfully."; // Set success message
-                return RedirectToAction("Index"); // Redirect to the task list
+                return RedirectToAction("Dashboard","Home"); // Redirect to the task list
             }
             return View(task); // Return the view with the task model if validation fails
         }
@@ -61,7 +61,7 @@ namespace ToDoApp.Controllers
                 _context.Tasks.Update(task);
                 _context.SaveChanges();
                 TempData["SuccessMessage"] = "Task updated successfully."; // Set success message
-                return RedirectToAction("Index"); // Redirect to the task list
+                return RedirectToAction("Dashboard","Home"); // Redirect to the task list
             }
             return View(task); // Return the view with the task model if validation fails
         }
@@ -110,7 +110,7 @@ namespace ToDoApp.Controllers
                 TempData["ErrorMessage"] = "An error occurred while deleting the task."; // Set error message
             }
 
-            return RedirectToAction("Index", "ToDo"); // Redirect to the dashboard after deletion
+            return RedirectToAction("Dashboard", "Home"); // Redirect to the dashboard after deletion
         }
     }
 }

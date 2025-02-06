@@ -2,8 +2,9 @@
 
 <h1>Edit Task</h1>
 
-<form asp-action="Edit" method="post">
+<form asp-controller="ToDo" asp-action="Edit" method="post">
     <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="UserId" /> <!-- Hidden input for UserId -->
     <div class="form-group">
         <label asp-for="Title"></label>
         <input asp-for="Title" class="form-control" />
@@ -42,7 +43,7 @@
     </div>
     <div class="form-group">
         <label asp-for="Status"></label>
-        <select asp-for="Status" class="form-control">
+        <select asp-for="Status" class="form-control" id="statusDropdown">
             <option value="">Select Status</option>
             <option value="To Do">To Do</option>
             <option value="In Progress">In Progress</option>
@@ -54,3 +55,13 @@
 </form>
 
 <a asp-action="Dashboard">Back to List</a>
+
+<script>
+    document.getElementById('statusDropdown').addEventListener('change', function() {
+        if (this.value === 'Done') {
+            document.getElementById('isCompletedCheckbox').checked = true; // Check the checkbox if "Done" is selected
+        } else {
+            document.getElementById('isCompletedCheckbox').checked = false; // Uncheck otherwise
+        }
+    });
+</script>
