@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "/Users/boqnaleksandrow/ToDoApp/obj/Debug/net9.0/scopedcss/projectbundle/ToDoApp.bundle.scp.css",
-      "PackagePath": "staticwebassets/ToDoApp.cm4vvbi3iw.bundle.scp.css"
+      "PackagePath": "staticwebassets/ToDoApp.koz3gtau8e.bundle.scp.css"
     },
     {
       "Id": "/Users/boqnaleksandrow/ToDoApp/wwwroot/css/site.css",
@@ -15,6 +15,10 @@
     {
       "Id": "/Users/boqnaleksandrow/ToDoApp/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/boqnaleksandrow/ToDoApp/wwwroot/js/themeSwitcher.js",
+      "PackagePath": "staticwebassets/js/themeSwitcher.js"
     },
     {
       "Id": "/Users/boqnaleksandrow/ToDoApp/wwwroot/lib/bootstrap/LICENSE",

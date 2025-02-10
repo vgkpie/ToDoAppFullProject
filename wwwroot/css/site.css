@@ -3,6 +3,7 @@
 body {
     background-color: white;
     color: #333;
+    margin-bottom: 20px;
 }
 
 .login-form, .register-form , .login-form{
@@ -28,19 +29,29 @@ body {
 .btn-primary:hover {
     background-color: #0056b3;
 }
-.footer {
-    position: bottom;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.75);
-    color: white;
-    text-align: center;
-  }
-
 #login{
     margin-top: 10px;
 }
 #register{
     margin-top: 10px;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: white;
+    color: #333;
+}
+
+a.light-theme {
+    color: #007bff;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+a.dark-theme {
+    color: #bb86fc;
 }
