@@ -31,7 +31,18 @@ namespace ToDoApp.Controllers
             return View(); // Show the index view for unauthenticated users
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy() 
+        {
+            return View();
+        }
+
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult Contacts()
+
         {
             return View();
         }

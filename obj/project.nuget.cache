@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0zWzqHNJqbk=",
+  "dgSpecHash": "QaUL559Cheo=",
   "success": true,
-  "projectFilePath": "/Users/boqnaleksandrow/ToDoApp/ToDoApp.csproj",
+  "projectFilePath": "/Users/boqnaleksandrow/Programming/ToDoApp/ToDoApp.csproj",
   "expectedPackageFiles": [
     "/Users/boqnaleksandrow/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/boqnaleksandrow/.nuget/packages/bouncycastle.cryptography/2.3.1/bouncycastle.cryptography.2.3.1.nupkg.sha512",

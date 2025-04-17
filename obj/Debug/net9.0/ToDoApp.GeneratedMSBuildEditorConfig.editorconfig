@@ -9,65 +9,73 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ToDoApp
 build_property.RootNamespace = ToDoApp
-build_property.ProjectDir = /Users/boqnaleksandrow/ToDoApp/
+build_property.ProjectDir = /Users/boqnaleksandrow/Programming/ToDoApp/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/boqnaleksandrow/ToDoApp
+build_property.MSBuildProjectDirectory = /Users/boqnaleksandrow/Programming/ToDoApp
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[/Users/boqnaleksandrow/ToDoApp/Views/Home/Dashboard.cshtml]
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/Home/AboutUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9BYm91dFVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/Home/Contacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Db250YWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/Home/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9EYXNoYm9hcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/boqnaleksandrow/ToDoApp/Views/Home/Index.cshtml]
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/boqnaleksandrow/ToDoApp/Views/Home/Login.cshtml]
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/boqnaleksandrow/ToDoApp/Views/Home/Privacy.cshtml]
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/boqnaleksandrow/ToDoApp/Views/Home/Register.cshtml]
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/boqnaleksandrow/ToDoApp/Views/Shared/Error.cshtml]
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/boqnaleksandrow/ToDoApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/boqnaleksandrow/ToDoApp/Views/ToDo/Create.cshtml]
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/ToDo/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9Eby9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/boqnaleksandrow/ToDoApp/Views/ToDo/Delete.cshtml]
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/ToDo/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9Eby9EZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/boqnaleksandrow/ToDoApp/Views/ToDo/Edit.cshtml]
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/ToDo/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVG9Eby9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/boqnaleksandrow/ToDoApp/Views/_ViewImports.cshtml]
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/boqnaleksandrow/ToDoApp/Views/_ViewStart.cshtml]
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/boqnaleksandrow/ToDoApp/Views/Shared/_Layout.cshtml]
+[/Users/boqnaleksandrow/Programming/ToDoApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6m7o6zila3

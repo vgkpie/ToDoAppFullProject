@@ -1,5 +1,46 @@
 /* Blue and White Theme Styles */
 
+/* Responsive styles for the dashboard and new pages */
+@media (max-width: 768px) {
+    .task-section {
+        margin-bottom: 20px;
+    }
+
+    .table {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+
+    .navbar-collapse {
+        justify-content: flex-end; /* Align items to the right */
+    }
+
+    .btn {
+        width: 100%; /* Make buttons full width on small screens */
+        margin-bottom: 10px; /* Add space between buttons */
+    }
+}
+
+
+/* Responsive styles for the dashboard and new pages */
+@media (max-width: 768px) {
+    .task-section {
+        margin-bottom: 20px;
+    }
+
+    .table {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack navbar items vertically */
+    }
+}
+
+
 body {
     background-color: white;
     color: #333;

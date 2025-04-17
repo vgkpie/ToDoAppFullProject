@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/boqnaleksandrow/ToDoApp/ToDoApp.csproj": {}
+    "/Users/boqnaleksandrow/Programming/ToDoApp/ToDoApp.csproj": {}
   },
   "projects": {
-    "/Users/boqnaleksandrow/ToDoApp/ToDoApp.csproj": {
+    "/Users/boqnaleksandrow/Programming/ToDoApp/ToDoApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/boqnaleksandrow/ToDoApp/ToDoApp.csproj",
+        "projectUniqueName": "/Users/boqnaleksandrow/Programming/ToDoApp/ToDoApp.csproj",
         "projectName": "ToDoApp",
-        "projectPath": "/Users/boqnaleksandrow/ToDoApp/ToDoApp.csproj",
+        "projectPath": "/Users/boqnaleksandrow/Programming/ToDoApp/ToDoApp.csproj",
         "packagesPath": "/Users/boqnaleksandrow/.nuget/packages/",
-        "outputPath": "/Users/boqnaleksandrow/ToDoApp/obj/",
+        "outputPath": "/Users/boqnaleksandrow/Programming/ToDoApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/boqnaleksandrow/.nuget/NuGet/NuGet.Config"
