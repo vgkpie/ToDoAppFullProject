@@ -19,6 +19,8 @@ namespace ToDoApp.Models
         [EmailAddress]
         public string Email { get; set; } // Required for user email
 
+        public bool IsAdmin { get; set; } = false; // New property to indicate admin user
+
         // Parameterless constructor
         public User() { }
 

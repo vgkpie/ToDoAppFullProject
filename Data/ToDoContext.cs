@@ -11,6 +11,7 @@ namespace ToDoApp.Data
 
         public DbSet<ToDoApp.Models.Task> Tasks { get; set; } // Use fully qualified name
         public DbSet<ToDoApp.Models.User> Users { get; set; } // New DbSet for users
+        public DbSet<ToDoApp.Models.Status> Statuses { get; set; } // New DbSet for statuses
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -19,6 +20,9 @@ namespace ToDoApp.Data
 
             modelBuilder.Entity<ToDoApp.Models.User>()
                 .HasKey(u => u.Id); // Explicitly define the primary key for User
+
+            modelBuilder.Entity<ToDoApp.Models.Status>()
+                .HasKey(s => s.Id); // Explicitly define the primary key for Status
         }
     }
 }

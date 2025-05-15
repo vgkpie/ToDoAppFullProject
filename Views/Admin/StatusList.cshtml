@@ -1,0 +1,54 @@
+@model List<ToDoApp.Models.Status>
+
+@{
+    ViewData["Title"] = "Manage Statuses";
+}
+
+<h2>Manage Statuses</h2>
+
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+}
+
+<form asp-action="AddStatus" asp-controller="Admin" method="post" class="mb-4">
+    <div class="form-group">
+        <label for="statusName">Status Name</label>
+        <input type="text" class="form-control" id="statusName" name="statusName" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Status</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="text-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}
+
+<h3>Existing Statuses</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Status Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var status in Model)
+        {
+            <tr>
+                <td>@status.Name</td>
+                <td>
+                    <form asp-action="DeleteStatus" asp-controller="Admin" method="post" onsubmit="return confirm('Are you sure you want to delete this status?');">
+                        <input type="hidden" name="id" value="@status.Id" />
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -302,7 +302,6 @@
 /Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
 /Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/scopedcss/bundle/ToDoApp.styles.css
 /Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/scopedcss/projectbundle/ToDoApp.bundle.scp.css
-/Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/compressed/4bmfksnjcg-x7pwxfs0lc.gz
 /Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/compressed/13ztrnwvwp-61n19gt1b8.gz
 /Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/compressed/6gbfcxjcpd-xtxxf3hu2r.gz
 /Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/compressed/ubft4ctz0q-bdk8romd29.gz
@@ -382,3 +381,4 @@
 /Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/ToDoApp.pdb
 /Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/ToDoApp.genruntimeconfig.cache
 /Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/ref/ToDoApp.dll
+/Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/compressed/4bmfksnjcg-m9zpzi4n0z.gz

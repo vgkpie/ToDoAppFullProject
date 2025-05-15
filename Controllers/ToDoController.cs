@@ -4,6 +4,7 @@ using ToDoApp.Data;
 using System.Security.Claims; // For accessing user claims
 using Microsoft.Extensions.Logging; // For logging
 using System.Linq; // For LINQ operations
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ToDoApp.Controllers
 {
@@ -18,27 +19,75 @@ namespace ToDoApp.Controllers
             _logger = logger; // Initialize logger
         }
 
-        // GET: ToDo/Create
-        public IActionResult Create()
+// GET: ToDo/Create
+public IActionResult Create()
+{
+    var statuses = _context.Statuses.ToList();
+    var viewModel = new ToDoApp.Models.TaskCreateViewModel
+    {
+        Task = new ToDoApp.Models.Task(),
+        StatusList = statuses
+    };
+    return View(viewModel);
+}
+
+// POST: ToDo/Create
+// POST: ToDo/Create
+[HttpPost]
+[ValidateAntiForgeryToken]
+public IActionResult Create(ToDoApp.Models.TaskCreateViewModel viewModel)
+{
+    _logger.LogInformation("Create POST called with Task: {@Task}", viewModel.Task);
+
+    try
+    {
+        // Parse and assign UserId from the logged-in user's claims
+        string? userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
+        if (string.IsNullOrEmpty(userIdClaim))
         {
-            return View();
+            _logger.LogWarning("User ID claim is missing.");
+            return Unauthorized(); // User is not authenticated
         }
 
-        // POST: ToDo/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Create(ToDoApp.Models.Task task) // Fully qualified Task reference
+        viewModel.Task.UserId = int.Parse(userIdClaim);
+    }
+    catch (Exception ex)
+    {
+        _logger.LogError("Failed to set UserId: {Message}", ex.Message);
+        return Unauthorized(); // User ID claim invalid
+    }
+
+    if (ModelState.IsValid)
+    {
+        try
         {
-            if (ModelState.IsValid)
-            {
-                task.UserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)); // Set the UserId from claims
-                _context.Tasks.Add(task);
-                _context.SaveChanges();
-                TempData["SuccessMessage"] = "Task created successfully."; // Set success message
-                return RedirectToAction("Dashboard","Home"); // Redirect to the task list
-            }
-            return View(task); // Return the view with the task model if validation fails
+            _context.Tasks.Add(viewModel.Task);
+            _context.SaveChanges();
+            TempData["SuccessMessage"] = "Task created successfully.";
+            return RedirectToAction("Dashboard", "Home");
         }
+        catch (Exception ex)
+        {
+            _logger.LogError("Error saving task: {Message}", ex.Message);
+            TempData["ErrorMessage"] = "An error occurred while creating the task.";
+        }
+    }
+    else
+    {
+        foreach (var modelStateEntry in ModelState)
+        {
+            var key = modelStateEntry.Key;
+            foreach (var error in modelStateEntry.Value.Errors)
+            {
+                _logger.LogWarning("ModelState error for {Key}: {ErrorMessage}", key, error.ErrorMessage);
+            }
+        }
+    }
+
+    // Repopulate status list on validation failure or exception
+    viewModel.StatusList = _context.Statuses.ToList();
+    return View(viewModel);
+}
 
         // GET: ToDo/Edit/5
         public IActionResult Edit(int id)

@@ -8,6 +8,7 @@ using System.Linq; // Ensure this is in...
 using System.Security.Claims; // For accessing user claims
 using Microsoft.AspNetCore.Authentication; // For CookieAuthenticationDefaults
 using Microsoft.AspNetCore.Authentication.Cookies; // For SignInAsync
+using System.Collections.Generic;
 
 namespace ToDoApp.Controllers
 {
@@ -134,9 +135,16 @@ namespace ToDoApp.Controllers
 
             if (int.TryParse(userIdString, out int userId)) // Try to parse the string to an integer
             {
+                var user = _context.Users.FirstOrDefault(u => u.Id == userId);
                 var tasks = _context.Tasks.Where(t => t.UserId == userId).ToList(); // Fetch tasks for the user
                 _logger.LogInformation("Tasks retrieved for User ID: {UserId}, Count: {TaskCount}", userId, tasks.Count); // Log task count
-                return View(tasks); // Pass the tasks to the view
+                ViewBag.IsAdmin = user != null && user.IsAdmin; // Pass admin status to the view
+
+                // Group tasks by Status dynamically
+                var groupedTasks = tasks.GroupBy(t => t.Status)
+                                        .ToDictionary(g => g.Key, g => g.ToList());
+
+                return View(groupedTasks); // Pass grouped tasks dictionary to the view
             }
             return RedirectToAction("Index"); // Redirect if userId is not valid
         }

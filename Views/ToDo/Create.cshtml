@@ -1,55 +1,54 @@
-@model ToDoApp.Models.Task
+@model ToDoApp.Models.TaskCreateViewModel
 
 <h1>Create New Task</h1>
 
-<form asp-controller="ToDo" asp-action="Create" method="post">
+<form asp-action="Create" asp-controller="ToDo" method="post">
+    @Html.AntiForgeryToken()
     <div class="form-group">
-        <label asp-for="Title"></label>
-        <input asp-for="Title" class="form-control" />
-        <span asp-validation-for="Title" class="text-danger"></span>
+        <label asp-for="Task.Title"></label>
+        <input asp-for="Task.Title" class="form-control" />
+        <span asp-validation-for="Task.Title" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Description"></label>
-        <input asp-for="Description" class="form-control" />
-        <span asp-validation-for="Description" class="text-danger"></span>
+        <label asp-for="Task.Description"></label>
+        <input asp-for="Task.Description" class="form-control" />
+        <span asp-validation-for="Task.Description" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="DueDate"></label>
-        <input asp-for="DueDate" class="form-control" type="date" />
-        <span asp-validation-for="DueDate" class="text-danger"></span>
+        <label asp-for="Task.DueDate"></label>
+        <input asp-for="Task.DueDate" class="form-control" type="date" />
+        <span asp-validation-for="Task.DueDate" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Priority"></label>
-        <select asp-for="Priority" class="form-control">
+        <label asp-for="Task.Priority"></label>
+        <select asp-for="Task.Priority" class="form-control">
             <option value="">Select Priority</option>
-            <option value="High">High</option>
-            <option value="Medium">Medium</option>
-            <option value="Low">Low</option>
+            <option value="High" selected="@(Model.Task.Priority == "High")">High</option>
+            <option value="Medium" selected="@(Model.Task.Priority == "Medium")">Medium</option>
+            <option value="Low" selected="@(Model.Task.Priority == "Low")">Low</option>
         </select>
-        <span asp-validation-for="Priority" class="text-danger"></span>
+        <span asp-validation-for="Task.Priority" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Category"></label>
-        <select asp-for="Category" class="form-control">
+        <label asp-for="Task.Category"></label>
+        <select asp-for="Task.Category" class="form-control">
             <option value="">Select Category</option>
-            <option value="Work">Work</option>
-            <option value="Personal">Personal</option>
-            <option value="Shopping">Shopping</option>
-            <option value="Other">Other</option>
+            <option value="Work" selected="@(Model.Task.Category == "Work")">Work</option>
+            <option value="Personal" selected="@(Model.Task.Category == "Personal")">Personal</option>
+            <option value="Shopping" selected="@(Model.Task.Category == "Shopping")">Shopping</option>
+            <option value="Other" selected="@(Model.Task.Category == "Other")">Other</option>
         </select>
-        <span asp-validation-for="Category" class="text-danger"></span>
+        <span asp-validation-for="Task.Category" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Status"></label>
-        <select asp-for="Status" class="form-control">
+        <label asp-for="Task.Status"></label>
+        <select asp-for="Task.Status" class="form-control" asp-items="@(new SelectList(Model.StatusList, "Name", "Name"))">
             <option value="">Select Status</option>
-            <option value="To Do">To Do</option>
-            <option value="In Progress">In Progress</option>
-            <option value="Done">Done</option>
         </select>
-        <span asp-validation-for="Status" class="text-danger"></span>
+        <span asp-validation-for="Task.Status" class="text-danger"></span>
     </div>
+    <input type="hidden" asp-for="Task.IsCompleted" value="false" />
     <button type="submit" class="btn btn-primary">Create Task</button>
 </form>
 
-<a asp-action="Dashboard">Back to List</a>
+<a asp-controller="Home" asp-action="Dashboard">Back to List</a>

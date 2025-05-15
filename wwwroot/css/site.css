@@ -1,6 +1,123 @@
-/* Blue and White Theme Styles */
+/* Improved Blue and White Theme Styles */
 
-/* Responsive styles for the dashboard and new pages */
+/* Global body and typography */
+body {
+    background-color: #f0f2f5;
+    color: #212529;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+/* Navbar enhancements */
+.navbar {
+    background-color: #007bff !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: white !important;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #cce5ff !important;
+    text-decoration: underline;
+}
+
+/* Navbar toggler button */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Footer styling */
+footer.footer {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.4);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #0056b3;
+    box-shadow: 0 4px 12px rgba(0, 86, 179, 0.6);
+}
+
+/* Task sections */
+.task-section {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.task-section h3 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #007bff;
+}
+
+/* Tables */
+.table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.table thead tr th {
+    background-color: #e9f2ff;
+    color: #007bff;
+    font-weight: 600;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px 8px 0 0;
+}
+
+.table tbody tr {
+    background-color: #f9fbff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.table tbody tr td {
+    vertical-align: middle;
+    padding: 12px 15px;
+}
+
+/* Collapse button */
+.btn-primary {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+}
+
+/* Admin buttons */
+.admin-buttons a.btn {
+    font-weight: 700;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
     .task-section {
         margin-bottom: 20px;
@@ -22,59 +139,6 @@
         width: 100%; /* Make buttons full width on small screens */
         margin-bottom: 10px; /* Add space between buttons */
     }
-}
-
-
-/* Responsive styles for the dashboard and new pages */
-@media (max-width: 768px) {
-    .task-section {
-        margin-bottom: 20px;
-    }
-
-    .table {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-
-    .navbar-nav {
-        flex-direction: column; /* Stack navbar items vertically */
-    }
-}
-
-
-body {
-    background-color: white;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.login-form, .register-form , .login-form{
-    max-width: 400px;
-    
-    padding: 20px;
-    border: 1px solid #007bff;
-    border-radius: 5px;
-    background-color: #f8f9fa;
-}
-
-.form-control {
-    border: 1px solid #007bff;
-    border-radius: 4px;
-}
-
-.btn-primary {
-    background-color: #007bff;
-    border: none;
-    color: white;
-}
-
-.btn-primary:hover {
-    background-color: #0056b3;
-}
-#login{
-    margin-top: 10px;
-}
-#register{
-    margin-top: 10px;
 }
 
 /* Light Theme */
