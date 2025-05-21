@@ -381,4 +381,4 @@
 /Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/ToDoApp.pdb
 /Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/ToDoApp.genruntimeconfig.cache
 /Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/ref/ToDoApp.dll
-/Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/compressed/4bmfksnjcg-m9zpzi4n0z.gz
+/Users/boqnaleksandrow/Programming/ToDoApp/obj/Debug/net9.0/compressed/4bmfksnjcg-1t4khac8jl.gz

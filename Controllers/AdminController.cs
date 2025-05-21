@@ -116,5 +116,23 @@ namespace ToDoApp.Controllers
             TempData["SuccessMessage"] = "Status deleted successfully.";
             return RedirectToAction("StatusList");
         }
+        // GET: Admin/AllTasks
+        public IActionResult AllTasks()
+        {
+            if (!IsAdmin())
+            {
+                return Unauthorized();
+            }
+
+            var usersWithTasks = _context.Users
+                .Select(u => new AdminUserTasksViewModel
+                {
+                    User = u,
+                    Tasks = _context.Tasks.Where(t => t.UserId == u.Id).ToList()
+                })
+                .ToList();
+
+            return View(usersWithTasks);
+        }
     }
 }
